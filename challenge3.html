@@ -1,0 +1,40 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+            <h2>Get string from user</h2>
+            <input type="text" id = "stringInput"><br>
+            <button id="submit">Submit</button>
+
+            <h3 id="result"></h3>
+    </body>
+
+    <script>
+        function reverseString(str) {
+            const strRev =  str.split('').reverse().join('')
+            return strRev
+        }
+
+        document.getElementById("submit").addEventListener("click", function(){
+
+            var str = document.getElementById("stringInput").value
+            var UpperStr = str.toUpperCase() 
+            var replaceStr = UpperStr.replace('O','Y')
+            var revStr = reverseString(replaceStr)
+
+            // to show message in html page
+            var message = `${str}<br>${UpperStr}<br>${replaceStr}<br>${revStr}`
+            document.getElementById("result").innerHTML = message
+
+            // to show message in console log
+            var messageLog =`${str} \n${UpperStr} \n${replaceStr}\n${revStr}`
+            console.log(messageLog)
+
+        }) //(type of event,what should do )
+    </script>
+    </html>

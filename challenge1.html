@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello world</h2>
+    <h3 id = "result"></h3>
+</body>
+
+<script>
+
+    var num1 = 5, num2 = 2;
+    var sum = num1 + num2;
+    var sub = num1 - num2;
+    var multi = num1 * num2;
+    var div = num1 / num2;
+    var mod = num1 % num2;
+
+   // `` 
+   
+   // to show result in html page
+    var message = `First number is: ${num1}<br>
+    Second number is: ${num2}<br>
+    sum is: ${sum}<br>
+    sub is: ${sub}<br>
+    mult is: ${multi}<br>
+    div is: ${div}<br>
+    mod is: ${mod}`;
+
+    document.getElementById("result").innerHTML = message
+
+    // to show result in console
+    var messageLog =`First number is: ${num1}\nSecond number is: ${num2}\nsum is: ${sum}\nsub is: ${sub}\nmult is: ${multi}\ndiv is: ${div}\nmod is: ${mod}`;
+    console.log(messageLog)
+
+</script>
+</html>

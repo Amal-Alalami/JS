@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id = "title">Hello world</h2>
+    <h3 id = "result"></h3>
+</body>
+
+<script>
+    // Function to reverse string
+    function reverseString(str) {
+        const strRev =  str.split('').reverse().join('')
+        return strRev
+    }
+
+    
+    var str = document.getElementById("title").innerHTML
+    var UpperStr = str.toUpperCase() 
+    var replaceStr = UpperStr.replace('O','Y')
+    var revStr = reverseString(replaceStr)
+
+    // to show message in html page
+    var message = `${str}<br>${UpperStr}<br>${replaceStr}<br>${revStr}`
+    document.getElementById("result").innerHTML = message
+
+    // to show message in console log
+    var messageLog =`${str} \n${UpperStr} \n${replaceStr}\n${revStr}`
+    console.log(messageLog)
+
+</script>
+</html>
