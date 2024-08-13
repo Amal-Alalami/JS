@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: aquamarine; text-align: center;">
+        <label>The weight(KG)</label> <br><br>
+        <input type="text" id = "weightInput">
+        <br><br>
+        <label>The height(Mete)</label> <br><br>
+        <input type="text" id="heightInput"> <br><br>
+        <button id="calculate">Calculate BMI</button>
+
+        <h4 id = "result"></h4>
+
+    </div>
+</body>
+
+<script>
+
+        document.getElementById("calculate").addEventListener("click", function(){
+
+            var w = Number(document.getElementById("weightInput").value)
+            var h = Number(document.getElementById("heightInput").value)
+
+            var message = ""
+            var BMI = w / (h*h)
+
+            if(BMI < 18){
+                message = `${BMI} <br> Slim`
+            }
+            else if(BMI >= 18 && BMI <= 24.9){
+                message = `${BMI} <br> Ideal weight`
+            }
+            else if(BMI >= 25 && BMI <= 29.9){
+                message = `${BMI} <br> Overweight`
+            }
+            else if(BMI >=30 && BMI <= 34.9){
+                message = `${BMI} <br>First degree obesity`
+            }
+            else if(BMI >= 35 && BMI <= 39.9){
+                message = `${BMI} <br> Second degree obesity`
+            }
+            else{
+                message = `${BMI} <br> Dangerous obesity`
+            }
+
+            document.getElementById("result").innerHTML = message
+
+
+    })
+    
+
+
+</script>
+</html>

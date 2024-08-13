@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="padding-top: 10%; text-align: center;">
+
+        <input type="text" id = "textInput">
+        <button id="submit">Submit</button>
+        <button id="delete">Delete</button><br>
+
+        <h4 id = "result"></h4>
+
+    </div>
+</body>
+
+<script>
+    let strArr = []
+    console.log(Array.isArray(strArr))
+    document.getElementById("submit").addEventListener("click", function(){
+
+        var str = document.getElementById("textInput").value
+        strArr.push(str)
+        var message = strArr.toString()
+        document.getElementById("result").innerHTML = message
+        
+    })
+
+    document.getElementById("delete").addEventListener("click", function(){
+        strArr.pop()
+        var message = strArr.toString()
+        document.getElementById("result").innerHTML = message
+
+    })
+   
+</script>
+</html>
