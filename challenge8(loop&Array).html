@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h2>Find Student</h2>
+        <input type="text" id="textInput">
+        <button id="submit">Search</button>
+
+        <h3 id="result"></h3>
+    </div>
+</body>
+
+<script>
+
+    let student = ["yarob", "ahmed", "khaled", "omar", "jaber", "sami", "salem"]
+    var message = ""
+
+    document.getElementById("submit").addEventListener("click", function(){
+
+        var name = document.getElementById("textInput").value
+        var name1 = name.toLowerCase()
+        var flag = true
+
+        for (i=0; i<student.length; i++){
+            if (name1 == student[i]){
+                message = `${name1} is in the school`
+                flag = false
+                break
+            }
+        }
+        if (flag){
+            message = `${name1} is NOT in the school`
+        }
+
+        document.getElementById("result").innerHTML = message
+    })
+
+</script>
+</html>

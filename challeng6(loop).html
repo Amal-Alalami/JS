@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id = "result" style="text-align: center;"></h3>
+</body>
+
+<script>
+    var num = 10
+    var message = ""
+    let resultArr = []
+    for (i=0;i<=30;i++){
+        var multi = num * i
+        message += `${num} X ${i} = ${multi} <br>`
+        document.getElementById("result").innerHTML = message
+    }
+    
+
+</script>
+</html>
