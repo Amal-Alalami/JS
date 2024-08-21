@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    function reverseArray(arr = [2,5,6]){
+       let array = []
+        j = 0
+        for (i=arr.length-1; i>=0; i--){
+            array[j] = arr[i]
+            j++
+        }
+
+        return array
+
+    }
+
+    let ar = [1,4,5,"hello",7,8,true, 10]
+    let revArr = reverseArray(ar)
+    console.log(ar)
+   console.log(revArr)
+</script>
+</html>
