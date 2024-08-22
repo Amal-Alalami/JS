@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="title1" style="visibility: hidden;">Title1</h2>
+    <h2 id="title2" style="visibility: hidden;">Title2</h2>
+    <h2 id="title3" style="visibility: hidden;">Title3</h2>
+    <h2 id="title4" style="visibility: hidden;">Title4</h2>
+</body>
+
+<script>
+
+    new Promise((resolve, reject)=>{
+        // Asynchronous code
+        setTimeout(() =>{
+            document.getElementById("title1").style.visibility = "visible"
+            resolve()
+        }, 1000)
+    }).then(()=> {
+
+        new Promise((resolve, reject) => {
+
+            setTimeout(()=>{
+                document.getElementById("title2").style.visibility = "visible"
+                resolve()
+            },1000)
+
+        }).then(() => {
+
+            new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                    document.getElementById("title3").style.visibility = "visible"
+                    resolve()
+                }, 1000);
+
+            }).then(()=>{
+
+                new Promise((resolve, reject) => {
+
+                    setTimeout(() => {
+                        document.getElementById("title4").style.visibility = "visible"
+                    }, 1000);
+                })
+            })
+        })
+    })
+
+</script>
+</html>
